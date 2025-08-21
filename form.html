@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--HEADER-SECTION-->
+    <section class="header-section">
+      <div class="header-wrapper">
+        <img class="header-logo" src="images/netflix-logo.png" />
+        <button
+          class="registration-button"
+          onclick="window.location.href='index.html'"
+        >
+          Úvodní strana
+        </button>
+      </div>
+
+      <!--REGISTRATION-FORM-->
+    </section>
+    <section class="form">
+      <form class="registration-form">
+        <input type="name" placeholder="Křestní jméno" required />
+        <input type="surname" placeholder="Příjmení" required />
+        <input type="email" placeholder="Přihlašovací email" required />
+        <input
+          type="password"
+          id="password"
+          placeholder="Vaše heslo"
+          required
+        />
+
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Heslo znovu"
+          required
+        />
+
+        <button class="send">Odeslat</button>
+      </form>
+    </section>
+
+    <script src="dist/form.js" defer></script>
+  </body>
+</html>

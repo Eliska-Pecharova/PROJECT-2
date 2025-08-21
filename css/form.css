@@ -1,0 +1,96 @@
+:root {
+  --font-box-color: rgb(214, 28, 28);
+  --font-color: rgb(255, 255, 255);
+  --footer-font-color: rgb(219, 217, 217);
+  --bc-color: rgb(0, 0, 0);
+}
+
+/*GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bc-color);
+  color: var(--font-color);
+  display: block;
+}
+
+/*HEADER-SECTION*/
+.header-section {
+  position: sticky;
+  top: 0;
+  background-color: var(--bc-color);
+  z-index: 1000;
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6vh;
+}
+
+.header-logo {
+  width: 120px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.registration-button {
+  margin-right: 20px;
+  background-color: var(--font-box-color);
+  color: var(--font-color);
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/*REGISTRATION-FORM-SECTION*/
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--bc-color);
+  width: 100%;
+  max-width: 400px;
+}
+
+.registration-form input {
+  padding: 12px 30px;
+  border: none;
+  font-size: 16px;
+  background-color: var(--bc-color);
+  border: 1px solid white;
+  color: var(--font-color);
+  outline: none;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.send {
+  background-color: var(--font-box-color);
+  border: none;
+  color: var(--font-color);
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 10px 30px;
+}

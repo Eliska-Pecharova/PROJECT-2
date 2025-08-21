@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image"
+      href="//fontawesome.com/icons/circle-up?f=classic&s=regular"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--HEADER-SECTION-->
+    <section class="header-section">
+      <div class="header-wrapper">
+        <img class="header-logo" src="images/netflix-logo.png" />
+        <button
+          class="registration-button"
+          onclick="window.location.href='form.html'"
+        >
+          Registrace
+        </button>
+      </div>
+    </section>
+
+    <!--HERO-SECTION-->
+    <section class="hero-section" id="hero-section">
+      <div class="hero-wrapper">
+        <div class="hero-box">
+          <h1>Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
+          <h2>Už od 239 Kč. Zrušte kdykoli.</h2>
+          <p>
+            Jste připraveni se dívat? Pro vytvoření nebo obnovení členství
+            zadejte e-mail.
+          </p>
+        </div>
+        <form class="search-form">
+          <input type="email" placeholder="E-mailová adresa" required />
+          <button type="submit">Začít</button>
+        </form>
+      </div>
+    </section>
+
+    <!--FILMS-SECTION-->
+    <section class="films">
+      <div class="films-wrapper">
+        <img src="images/avengers.jpg" />
+        <img src="images/bugs-life.jpeg" />
+        <img src="images/thor.jpeg" />
+      </div>
+      <button
+        class="searching-film-btn"
+        onclick="window.location.href='films.html'"
+      >
+        Najít další filmy
+      </button>
+    </section>
+
+    <!--ARROW-SECTION-->
+    <section class="arrow-section">
+      <button class="arrow-btn" id="scrollToTop">
+        <i class="fa-regular fa-circle-up"></i>
+      </button>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer-container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <a href="#">Často kladené dotazy</a>
+          <a href="#">Vztahy s investory</a>
+          <a href="#">Jak se dívat</a>
+          <a href="#">Podnikové informace</a>
+          <a href="#">Právní oznámení</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Centrum zákaznické podpory</a>
+          <a href="#">Kariéra</a>
+          <a href="#">Podmínky používání</a>
+          <a href="#">Kontaktujte nás</a>
+          <a href="#">Uvádí jedině Netflix</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Účet</a>
+          <a href="#">Uplatněte dárkové poukazy</a>
+          <a href="#">Soukromí</a>
+          <a href="#">Testy rychlosti</a>
+          <a href="#">Reklamy</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Pro média</a>
+          <a href="#">Koupit dárkové poukazy</a>
+          <a href="#">Nastavení soukromí cookie</a>
+          <a href="#">Právní média</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <div class="footer-copywright">
+          © 2025 - By Eliska Pecharova. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="dist/script.js" defer></script>
+  </body>
+</html>

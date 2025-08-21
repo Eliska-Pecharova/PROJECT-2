@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/films.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="films-section">
+      <button class="main-btn" onclick="window.location.href='index.html'">
+        Úvodní strana
+      </button>
+      <select name="roller-btn" id="rollerButton" class="roller-btn">
+        <option value="Vyberte možnosti">Vyberte možnosti</option>
+        <option value="Girl">Girl</option>
+        <option value="Boy">Boy</option>
+        <option value="Avengers">Avengers</option>
+        <option value="Horror">Horror</option>
+      </select>
+    </section>
+    <section id="posterGrid" class="grid-container"></section>
+    <script src="dist/films.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+/*HERO-SECTION*/
+@media (width <= 768px) {
+  .hero-box,
+  .search-form,
+  .search-form input {
+    height: auto;
+    width: 90%;
+  }
+  .hero-box p {
+    margin-bottom: 5px;
+  }
+}
+
+/*FILMS-SECTION*/
+@media (width <= 768px) {
+  .films-wrapper {
+    height: auto;
+  }
+}
+
+@media (width >=768px) {
+  .films-wrapper {
+    height: auto;
+  }
+}
+
+/*FOOTER*/
+@media (width <= 768px) {
+  .footer-container {
+    padding: 40px 30px;
+  }
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    gap: 0;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-column a {
+    font-size: 16px;
+    gap: 20px;
+  }
+
+  .footer-copy {
+    font-size: 15px;
+  }
+}
