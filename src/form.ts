@@ -1,38 +1,50 @@
 /*
  *REGISTRATION FORM
  */
-const password = document.getElementById("password") as HTMLInputElement;
-const confirm = document.getElementById("confirm-password") as HTMLInputElement;
+// Get the password and password confirmation input fields
+const passwordInput = document.getElementById("password") as HTMLInputElement;
+const confirmInput = document.getElementById(
+  "confirm-password"
+) as HTMLInputElement;
 
+// Password validation function
 function validatePasswords(): void {
-  const pass = password.value;
-  const conf = confirm.value;
+  const passwordValue = passwordInput.value;
+  const confirmValue = confirmInput.value;
 
-  const minLength = pass.length >= 3;
+  const isStrong = passwordValue.length >= 1;
+  const isMatch = passwordValue === confirmValue;
 
-  const isStrong = minLength;
-  const isMatch = pass === conf;
-
-  // Password – reacts on the first character
-
-  if (pass === "") {
-    password.style.borderColor = "white";
+  // Master password validation
+  if (passwordValue === "") {
+    // If the field is empty, we set the color to neutral
+    passwordInput.style.borderColor = "white";
   } else if (isStrong) {
-    password.style.borderColor = "green";
+    // If the password is long enough, green
+    passwordInput.style.borderColor = "green";
   } else {
-    password.style.borderColor = "red";
+    // If the password is short, red
+    passwordInput.style.borderColor = "red";
   }
 
-  // Password confirmation – responds with the first character
-
-  if (conf === "") {
-    confirm.style.borderColor = "white";
+  // Password confirmation validation
+  if (confirmValue === "") {
+    // If the field is empty, we set the color to neutral
+    confirmInput.style.borderColor = "white";
   } else if (isStrong && isMatch) {
-    confirm.style.borderColor = "green";
+    // If the password is long enough, green
+    confirmInput.style.borderColor = "green";
   } else {
-    confirm.style.borderColor = "red";
+    // If the password is short, red
+    confirmInput.style.borderColor = "red";
   }
 }
 
+// Run validation every time the input changes
+passwordInput.addEventListener("input", validatePasswords);
+confirmInput.addEventListener("input", validatePasswords);
+
+
 password.addEventListener("input", validatePasswords);
 confirm.addEventListener("input", validatePasswords);
+
