@@ -45,6 +45,4 @@ passwordInput.addEventListener("input", validatePasswords);
 confirmInput.addEventListener("input", validatePasswords);
 
 
-password.addEventListener("input", validatePasswords);
-confirm.addEventListener("input", validatePasswords);
 
