@@ -21,12 +21,26 @@
     <section class="header-section">
       <div class="header-wrapper">
         <img class="header-logo" src="images/netflix-logo.png" />
-        <button
-          class="registration-button"
-          onclick="window.location.href='form.html'"
-        >
-          Registrace
-        </button>
+        <div class="right-side">
+          <div class="language-selector">
+            <img
+              class="language-icon"
+              src="icons/icons8-translate-24 (1).png"
+            />
+            <select name="language-choose" id="language-choose">
+              <option value="cz">Česky</option>
+              <option value="en">Anglicky</option>
+              <option value="es">Španělsky</option>
+              <option value="de">Německy</option>
+            </select>
+          </div>
+          <button
+            class="registration-button"
+            onclick="window.location.href='form.html'"
+          >
+            Registrace
+          </button>
+        </div>
       </div>
     </section>
 
@@ -74,21 +88,21 @@
     <footer class="footer-container">
       <div class="footer-columns">
         <div class="footer-column">
-          <a href="#">Často kladené dotazy</a>
+          <a href="questions.html">Často kladené dotazy</a>
           <a href="#">Vztahy s investory</a>
           <a href="#">Jak se dívat</a>
           <a href="#">Podnikové informace</a>
           <a href="#">Právní oznámení</a>
         </div>
         <div class="footer-column">
-          <a href="#">Centrum zákaznické podpory</a>
+          <a href="faq.html">Centrum zákaznické podpory</a>
           <a href="#">Kariéra</a>
           <a href="#">Podmínky používání</a>
           <a href="#">Kontaktujte nás</a>
           <a href="#">Uvádí jedině Netflix</a>
         </div>
         <div class="footer-column">
-          <a href="#">Účet</a>
+          <a href="account.html">Účet</a>
           <a href="#">Uplatněte dárkové poukazy</a>
           <a href="#">Soukromí</a>
           <a href="#">Testy rychlosti</a>
@@ -103,7 +117,7 @@
       </div>
       <div class="footer-copy">
         <div class="footer-copywright">
-          © 2025 - By Eliska Pecharova. All Rights Reserved.
+          © 2025 - by Eliska Pecharova. All Rights Reserved.
         </div>
       </div>
     </footer>

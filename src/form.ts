@@ -7,6 +7,17 @@ const confirmInput = document.getElementById(
   "confirm-password"
 ) as HTMLInputElement;
 
+// Helper function to set border color based on condition
+function setBorderColor(
+  input: HTMLInputElement,
+  condition: boolean | null
+): void {
+  const color =
+    condition === null ? "white" : condition === true ? "green" : "red";
+
+  input.style.borderColor = color;
+}
+
 // Password validation function
 function validatePasswords(): void {
   const passwordValue = passwordInput.value;
@@ -15,34 +26,15 @@ function validatePasswords(): void {
   const isStrong = passwordValue.length >= 1;
   const isMatch = passwordValue === confirmValue;
 
-  // Master password validation
-  if (passwordValue === "") {
-    // If the field is empty, we set the color to neutral
-    passwordInput.style.borderColor = "white";
-  } else if (isStrong) {
-    // If the password is long enough, green
-    passwordInput.style.borderColor = "green";
-  } else {
-    // If the password is short, red
-    passwordInput.style.borderColor = "red";
-  }
+  // Set border color for password field
+  setBorderColor(passwordInput, passwordValue === "" ? null : isStrong);
 
-  // Password confirmation validation
-  if (confirmValue === "") {
-    // If the field is empty, we set the color to neutral
-    confirmInput.style.borderColor = "white";
-  } else if (isStrong && isMatch) {
-    // If the password is long enough, green
-    confirmInput.style.borderColor = "green";
-  } else {
-    // If the password is short, red
-    confirmInput.style.borderColor = "red";
-  }
+  // Set border color for confirmation field
+  const confirmCondition = confirmValue === "" ? null : isStrong && isMatch;
+
+  setBorderColor(confirmInput, confirmCondition);
 }
 
 // Run validation every time the input changes
 passwordInput.addEventListener("input", validatePasswords);
 confirmInput.addEventListener("input", validatePasswords);
-
-
-

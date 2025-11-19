@@ -1,4 +1,22 @@
 /*
+ * LANGUAGE-SELECTOR
+ */
+const select = document.getElementById("language-choose") as HTMLSelectElement;
+
+select.addEventListener("change", () => {
+  const selectedLang = select.value as "cz" | "en" | "es" | "de";
+
+  // Můžeš sem přidat libovolnou akci:
+  console.log("Zvolený jazyk:", selectedLang);
+
+  // Volitelně: uložení do localStorage
+  localStorage.setItem("preferredLanguage", selectedLang);
+
+  // Volitelně: přesměrování na jazykovou verzi
+  // window.location.href = `/${selectedLang}/index.html`;
+});
+
+/*
  *ARROW BUTTON
  */
 // Get the scroll-to-top button element
@@ -20,4 +38,3 @@ scrollButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-

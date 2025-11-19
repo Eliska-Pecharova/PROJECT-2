@@ -1,35 +1,27 @@
 /*
  *REGISTRATION FORM
  */
-const password = document.getElementById("password");
-const confirm = document.getElementById("confirm-password");
-function validatePasswords() {
-    const pass = password.value;
-    const conf = confirm.value;
-    const minLength = pass.length >= 3;
-    const isStrong = minLength;
-    const isMatch = pass === conf;
-    // Password – reacts on the first character
-    if (pass === "") {
-        password.style.borderColor = "white";
-    }
-    else if (isStrong) {
-        password.style.borderColor = "green";
-    }
-    else {
-        password.style.borderColor = "red";
-    }
-    // Password confirmation – responds with the first character
-    if (conf === "") {
-        confirm.style.borderColor = "white";
-    }
-    else if (isStrong && isMatch) {
-        confirm.style.borderColor = "green";
-    }
-    else {
-        confirm.style.borderColor = "red";
-    }
+// Get the password and password confirmation input fields
+const passwordInput = document.getElementById("password");
+const confirmInput = document.getElementById("confirm-password");
+// Helper function to set border color based on condition
+function setBorderColor(input, condition) {
+    const color = condition === null ? "white" : condition === true ? "green" : "red";
+    input.style.borderColor = color;
 }
-password.addEventListener("input", validatePasswords);
-confirm.addEventListener("input", validatePasswords);
+// Password validation function
+function validatePasswords() {
+    const passwordValue = passwordInput.value;
+    const confirmValue = confirmInput.value;
+    const isStrong = passwordValue.length >= 1;
+    const isMatch = passwordValue === confirmValue;
+    // Set border color for password field
+    setBorderColor(passwordInput, passwordValue === "" ? null : isStrong);
+    // Set border color for confirmation field
+    const confirmCondition = confirmValue === "" ? null : isStrong && isMatch;
+    setBorderColor(confirmInput, confirmCondition);
+}
+// Run validation every time the input changes
+passwordInput.addEventListener("input", validatePasswords);
+confirmInput.addEventListener("input", validatePasswords);
 //# sourceMappingURL=form.js.map
