@@ -1,0 +1,150 @@
+:root {
+  --font-box-color: rgb(214, 28, 28);
+  --font-color: rgb(255, 255, 255);
+  --font-question-color: rgb(0, 0, 0);
+  --footer-font-color: rgb(219, 217, 217);
+  --bc-2-color: rgb(0, 0, 0);
+  --bc-color: rgb(255, 255, 255);
+  --footer-bc-color: rgb(201, 10, 10);
+}
+
+/*GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bc-color);
+  color: var(--font-color);
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*HEADER-SECTION*/
+.header-section {
+  position: sticky;
+  top: 0;
+  background-color: var(--bc-2-color);
+  z-index: 1000;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.header-logo {
+  width: 120px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.header-title {
+  left: 20px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.header-title::before {
+  content: "|";
+  margin-right: 0.5rem;
+  color: var(--color-white);
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.home-page-button {
+  margin-right: 20px;
+  color: var(--font-color);
+  background-color: var(--bc-2-color);
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/*HERO-SECTION*/
+.hero-section {
+  background-color: var(--bc-2-color);
+  color: var(--font-color);
+  padding: 30px 40px;
+}
+
+.hero-title {
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+.hero-secondTitle {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/*SECTIONS*/
+.section {
+  background-color: var(--bc-2-color);
+  color: var(--font-color);
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+img {
+  margin-right: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.flexbox {
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 28px;
+
+  color: var(--font-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.flexbox ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li a {
+  color: #fff;
+  background-color: #e50914;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #99050c;
+}
