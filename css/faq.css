@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--bc-color);
   color: var(--font-color);
   display: block;
@@ -55,6 +55,10 @@ body {
   width: 120px;
   height: 50px;
   margin-left: 10px;
+}
+
+.header-logo-small {
+  display: none;
 }
 
 .header-title {

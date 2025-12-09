@@ -57,6 +57,10 @@ body {
   margin-left: 10px;
 }
 
+.header-logo-small {
+  display: none;
+}
+
 .header-title {
   left: 20px;
   font-size: 22px;
@@ -65,7 +69,7 @@ body {
 
 .header-title::before {
   content: "|";
-  margin-right: 0.5rem;
+  margin-right: 8px;
   color: var(--color-white);
   font-size: 35px;
   font-weight: 200;
@@ -202,4 +206,65 @@ body {
   text-align: center;
   font-size: 13px;
   color: var(--footer-font-color);
+}
+
+/* MEDIA QUERIES: 769px – 1380px */
+@media screen and (min-width: 769px) and (max-width: 1380px) {
+  /* HEADER */
+  .header-wrapper {
+    height: 10vh; /* trochu vyšší header */
+    padding: 0 20px;
+  }
+
+  .header-logo {
+    width: 100px;
+    height: 40px;
+  }
+
+  .header-title {
+    font-size: 20px;
+  }
+
+  .registration-button,
+  .home-page-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* QUESTIONS SECTION */
+  .question-section {
+    padding: 30px 150px; /* menší horizontální padding */
+    flex-direction: column; /* lepší čitelnost na středních displejích */
+  }
+
+  .question h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .question p {
+    font-size: 15px;
+    padding: 0 40px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    padding: 30px 100px;
+  }
+
+  .footer-columns {
+    flex-direction: column; /* sloupce pod sebe */
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .language-selector {
+    width: 170px;
+    margin-top: 20px;
+  }
 }

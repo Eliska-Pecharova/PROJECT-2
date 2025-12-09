@@ -1,0 +1,17 @@
+/*HERO-SECTION*/
+@media (width <= 768px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-secondTitle {
+    font-size: 18px;
+  }
+}
+
+/*SECTIONS*/
+@media (width <= 768px) {
+  h2 {
+    font-size: 22px;
+  }
+}
